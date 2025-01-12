@@ -599,6 +599,9 @@ class RingGroup : public GroupImpl {
   void recv(array& out, int src) override {
     throw std::runtime_error("[ring] Recv not supported.");
   }
+  void barrier() override {
+    throw std::runtime_error("[ring] Barrier not supported.");
+  }
 
  private:
   template <typename T>
